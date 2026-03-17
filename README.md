@@ -1,13 +1,13 @@
-# 🌭 Sausage Dog Counter (Contador de Salchichas) 🐕
+# Contador de Salchichas
 
 ¡Porque nunca hay suficientes perros salchicha en el mundo! Esta es una aplicación desarrollada en **Godot Engine** diseñada para llevar la cuenta definitiva de cada salchicha que cruza por tu camino.
 
 ## 🚀 ¿Qué hace esta maravilla?
 * **Conteo en tiempo real:** Un botón gigante (y probablemente adorable) para sumar salchichas.
-* **Persistencia de datos:** (Si lo configuraste) Las salchichas no se olvidan; el contador se guarda aunque cierres la app.
+* **Persistencia de datos:** Las salchichas no se olvidan; el contador se guarda aunque cierres la app.
 * **Interfaz optimizada:** Diseñada para una experiencia de usuario *dog-friendly*.
 
-## 🛠️ El motor bajo el capó (Tech Stack)
+## 🛠️ El motor
 * **Engine:** Godot 4.x (o la versión que uses).
 * **Lenguaje:** GDScript (Lógica de señales y manejo de nodos).
 * **UI:** Sistema de Control Nodes para un diseño responsivo.
@@ -23,4 +23,4 @@ Para este proyecto me enfoqué en:
 3. **Exportación:** Configuración para que funcione perfectamente en dispositivos móviles.
 
 ---
-> **Dato curioso:** Ningún perro salchicha fue ignorado durante el desarrollo de este software. 🐾
+> **Dato curioso:** Ningún perro salchicha fue ignorado durante el desarrollo de este software.
