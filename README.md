@@ -335,6 +335,23 @@ Now there is a database for that.
 
 Problem solved.
 
+## Why Godot?
+
+There was also a personal reason behind the choice of engine.
+
+Both my girlfriend and I are from Argentina, and Godot itself was originally created in Argentina.
+
+So when I started this project, choosing Godot felt especially fitting.
+
+It was not only a practical choice for building a lightweight mobile app, but also a small way of using a piece of technology that came from the same country as the people this project was made for.
+
+A very Argentine engine for a very Argentine couple counting dachshunds.
+
+> Mate, dulce de leche, Godot, Messi, and the Dachshund Counter are all Argentine. ⭐⭐⭐  
+> Coincidence? I don't think so.
+
+It just felt right.
+
 ---
 
 ## Final Important Scientific Statement
@@ -346,5 +363,5 @@ Some things from the original README were too important to remove.
 ---
 
 <p align="center">
-  <strong>Made with Godot, Firebase and an unreasonable commitment to counting dachshunds.</strong>
+  <strong>Made in Argentina with Godot, Firebase and an unreasonable commitment to counting dachshunds.</strong>
 </p>
