@@ -1,0 +1,40 @@
+# Godot
+.godot/
+
+# Android builds and exported applications
+android/build/
+build/
+*.apk
+*.aab
+*.idsig
+
+# Signing material
+*.keystore
+*.jks
+*.p12
+*.pem
+
+# Firebase / Google configuration
+google-services.json
+**/google-services.json
+.firebaserc
+firebase-debug.log*
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Server dependencies and temporary output
+functions/node_modules/
+node_modules/
+export-*.log
+*.tmp
+*.bak
+
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

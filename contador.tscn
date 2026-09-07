@@ -1,22 +1,19 @@
-[gd_scene load_steps=13 format=3 uid="uid://bugby2rpggupa"]
+[gd_scene format=3 uid="uid://bugby2rpggupa"]
 
 [ext_resource type="Script" uid="uid://4e7ynd4o4l0n" path="res://contador.gd" id="1_33s27"]
-[ext_resource type="Texture2D" uid="uid://byvvr6hppcua6" path="res://fondoperrossalchichas.png" id="2_f72jp"]
+[ext_resource type="AudioStream" uid="uid://cr6gx5eueqxy0" path="res://MusicaDeFondo.wav" id="2_58rl3"]
 [ext_resource type="AudioStream" uid="uid://bsbqgwteytsjo" path="res://Rare-Achievement-Minecraft-Sound-Effect-_HD_.wav" id="2_iaqe5"]
-[ext_resource type="Texture2D" uid="uid://bmdvg7vysvegx" path="res://contadir canino.png" id="3_2ic0v"]
-[ext_resource type="FontFile" uid="uid://celf4vewg7lia" path="res://TitanOne-Regular.ttf" id="3_cyu6h"]
-[ext_resource type="Texture2D" uid="uid://bbmgg61p0gbur" path="res://Botones/boton suma nuevo.png" id="4_cyu6h"]
-[ext_resource type="Texture2D" uid="uid://bbhidfldg0564" path="res://Botones/boton resta nuevo.png" id="6_iaqe5"]
+[ext_resource type="AudioStream" uid="uid://b1p3ud8rk8er4" path="res://snd_heal_c.wav" id="3_yefth"]
+[ext_resource type="Texture2D" uid="uid://bpv2tkd4ucxjm" path="res://fondoperrossalchichas 2.png" id="4_58rl3"]
+[ext_resource type="FontFile" uid="uid://ur2nv0pjqnup" path="res://Botones/Fredoka-Medium.ttf" id="5_2etjx"]
+[ext_resource type="Texture2D" uid="uid://cvf6d8qu712sh" path="res://parche contador canino.png" id="6_58rl3"]
+[ext_resource type="Texture2D" uid="uid://c7lgfnumqu1ee" path="res://Botones/parche boton suma nuevo.png" id="7_2etjx"]
+[ext_resource type="Texture2D" uid="uid://7ut0j06pg271" path="res://Botones/boton resta nuevo copia.png" id="8_2etjx"]
 [ext_resource type="Texture2D" uid="uid://ck8bsdptcflu2" path="res://Experience_Animation.png" id="8_uxiga"]
+[ext_resource type="AudioStream" uid="uid://1mdjrl6mfbjx" path="res://mus_badnote3.wav" id="10_ktx2f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5oik"]
-texture = ExtResource("3_2ic0v")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iaqe5"]
-texture = ExtResource("4_cyu6h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxiga"]
-texture = ExtResource("6_iaqe5")
+texture = ExtResource("6_58rl3")
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uxiga"]
 particles_animation = true
@@ -24,7 +21,79 @@ particles_anim_h_frames = 5
 particles_anim_v_frames = 3
 particles_anim_loop = false
 
-[node name="Node2D" type="Control"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_58rl3"]
+texture = ExtResource("7_2etjx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yefth"]
+texture = ExtResource("7_2etjx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2etjx"]
+texture = ExtResource("7_2etjx")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ktx2f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64csu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxiga"]
+texture = ExtResource("8_2etjx")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_51ud8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_notificacion"]
+bg_color = Color(0.984314, 0.776471, 0.360784, 0.96)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.356863, 0.137255, 0.0705882, 1)
+corner_radius_top_left = 34
+corner_radius_top_right = 34
+corner_radius_bottom_right = 34
+corner_radius_bottom_left = 34
+shadow_color = Color(0, 0, 0, 0.35)
+shadow_size = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avistamiento"]
+bg_color = Color(0.164706, 0.0745098, 0.0470588, 0.98)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.984314, 0.776471, 0.360784, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+shadow_color = Color(0, 0, 0, 0.55)
+shadow_size = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arcade"]
+bg_color = Color(0.025, 0.02, 0.075, 0.985)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.494, 0.322, 0.925, 1)
+corner_radius_top_left = 52
+corner_radius_top_right = 52
+corner_radius_bottom_right = 52
+corner_radius_bottom_left = 52
+shadow_color = Color(0.3, 0.1, 0.8, 0.5)
+shadow_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_area_arcade"]
+bg_color = Color(0.055, 0.035, 0.12, 0.96)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.35, 0.75, 1, 0.8)
+corner_radius_top_left = 34
+corner_radius_top_right = 34
+corner_radius_bottom_right = 34
+corner_radius_bottom_left = 34
+
+[node name="Node2D" type="Control" unique_id=387951921]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 523.0
@@ -34,72 +103,53 @@ offset_bottom = 202.0
 size_flags_vertical = 3
 script = ExtResource("1_33s27")
 
-[node name="SonidoFiesta" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=339073954]
+stream = ExtResource("2_58rl3")
+volume_db = -20.543
+autoplay = true
+
+[node name="SonidoSuma" type="AudioStreamPlayer" parent="." unique_id=1188328503]
+stream = ExtResource("3_yefth")
+volume_db = -7.704
+
+[node name="SonidoResta" type="AudioStreamPlayer" parent="." unique_id=171397568]
+stream = ExtResource("10_ktx2f")
+volume_db = -2.568
+
+[node name="SonidoFiesta" type="AudioStreamPlayer2D" parent="." unique_id=1382959137]
 stream = ExtResource("2_iaqe5")
 
-[node name="Fondo" type="TextureRect" parent="."]
+[node name="SonidoRareza" type="AudioStreamPlayer" parent="." unique_id=1821458928]
+volume_db = -4.0
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=965918767]
 layout_mode = 0
 offset_left = -573.0
 offset_top = -355.0
 offset_right = 817.0
 offset_bottom = 2303.9756
-texture = ExtResource("2_f72jp")
+texture = ExtResource("4_58rl3")
 stretch_mode = 6
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1156710167]
 layout_mode = 0
 offset_left = -436.0
 offset_top = 26.0
 offset_right = 469.2328
 offset_bottom = 711.0
+mouse_filter = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7019608)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("3_cyu6h")
-theme_override_font_sizes/font_size = 300
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 358
 theme_override_styles/normal = SubResource("StyleBoxTexture_m5oik")
 text = "0 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = -351.0
-offset_top = 756.0
-offset_right = 407.50665
-offset_bottom = 1303.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("3_cyu6h")
-theme_override_font_sizes/font_size = 105
-theme_override_styles/normal = SubResource("StyleBoxTexture_iaqe5")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_iaqe5")
-theme_override_styles/hover = SubResource("StyleBoxTexture_iaqe5")
-button_mask = 3
-text = "¡Salchicha
-a la
-Vista!"
-
-[node name="ButtonResta" type="Button" parent="."]
-layout_mode = 0
-offset_left = -342.0
-offset_top = 1350.0
-offset_right = 414.19128
-offset_bottom = 1893.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("3_cyu6h")
-theme_override_font_sizes/font_size = 105
-theme_override_styles/normal = SubResource("StyleBoxTexture_uxiga")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_uxiga")
-theme_override_styles/hover = SubResource("StyleBoxTexture_uxiga")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_uxiga")
-text = "No era un
-Perro
-Salchicha :("
-
-[node name="Confeti" type="CPUParticles2D" parent="."]
+[node name="Confeti" type="CPUParticles2D" parent="." unique_id=633029445]
 material = SubResource("CanvasItemMaterial_uxiga")
 position = Vector2(-7, -203)
 emitting = false
@@ -117,3 +167,498 @@ initial_velocity_max = 402.78
 scale_amount_min = 0.5
 scale_amount_max = 0.5
 anim_speed_max = 1.0
+
+[node name="Button" type="Button" parent="." unique_id=224059791]
+layout_mode = 0
+offset_left = -351.0
+offset_top = 756.0
+offset_right = 407.50665
+offset_bottom = 1303.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 105
+theme_override_styles/normal = SubResource("StyleBoxTexture_58rl3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yefth")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2etjx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ktx2f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_64csu")
+button_mask = 3
+text = "¡Salchicha
+a la
+Vista!"
+
+[node name="ButtonResta" type="Button" parent="." unique_id=2027304901]
+layout_mode = 0
+offset_left = -342.0
+offset_top = 1350.0
+offset_right = 414.19128
+offset_bottom = 1893.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 105
+theme_override_styles/normal = SubResource("StyleBoxTexture_uxiga")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uxiga")
+theme_override_styles/hover = SubResource("StyleBoxTexture_uxiga")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_uxiga")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_51ud8")
+button_mask = 3
+text = "No era un
+Perro
+Salchicha :("
+
+[node name="NotificacionEnApp" type="PanelContainer" parent="." unique_id=2057060612]
+visible = false
+z_index = 100
+layout_mode = 0
+offset_left = -470.0
+offset_right = 470.0
+offset_bottom = 250.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_notificacion")
+
+[node name="Margen" type="MarginContainer" parent="NotificacionEnApp" unique_id=589891437]
+layout_mode = 2
+theme_override_constants/margin_left = 38
+theme_override_constants/margin_top = 26
+theme_override_constants/margin_right = 38
+theme_override_constants/margin_bottom = 26
+
+[node name="Contenido" type="VBoxContainer" parent="NotificacionEnApp/Margen" unique_id=671247995]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Titulo" type="Label" parent="NotificacionEnApp/Margen/Contenido" unique_id=1888343817]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.239216, 0.0745098, 0.027451, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 48
+text = "Mensaje salchicha"
+horizontal_alignment = 1
+
+[node name="Cuerpo" type="Label" parent="NotificacionEnApp/Margen/Contenido" unique_id=22128953]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.239216, 0.0745098, 0.027451, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 36
+text = "Contenido de la notificación"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PanelAvistamiento" type="PanelContainer" parent="." unique_id=1711010175]
+visible = false
+z_index = 70
+layout_mode = 0
+offset_left = -520.0
+offset_top = 40.0
+offset_right = 520.0
+offset_bottom = 2110.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_avistamiento")
+
+[node name="Margen" type="MarginContainer" parent="PanelAvistamiento" unique_id=1133302900]
+layout_mode = 2
+theme_override_constants/margin_left = 34
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 34
+theme_override_constants/margin_bottom = 28
+
+[node name="Contenido" type="VBoxContainer" parent="PanelAvistamiento/Margen" unique_id=2030904657]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Titulo" type="Label" parent="PanelAvistamiento/Margen/Contenido" unique_id=902312268]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.839216, 0.458824, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 50
+text = "¿Qué salchicha vieron?"
+horizontal_alignment = 1
+
+[node name="Descripcion" type="Label" parent="PanelAvistamiento/Margen/Contenido" unique_id=1694809635]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 28
+text = "Elegí su pelaje y después anotá la localidad."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="EtiquetaColor" type="Label" parent="PanelAvistamiento/Margen/Contenido" unique_id=528702329]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.839216, 0.458824, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 32
+text = "Pelaje y rareza"
+
+[node name="GrillaColores" type="GridContainer" parent="PanelAvistamiento/Margen/Contenido" unique_id=841877764]
+custom_minimum_size = Vector2(0, 1000)
+layout_mode = 2
+theme_override_constants/h_separation = 14
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="RarezaSeleccionada" type="Label" parent="PanelAvistamiento/Margen/Contenido" unique_id=315282788]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.82)
+theme_override_colors/font_outline_color = Color(0.05, 0.02, 0.01, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 31
+text = "Elegí el pelaje que vieron"
+horizontal_alignment = 1
+
+[node name="EtiquetaLocalidad" type="Label" parent="PanelAvistamiento/Margen/Contenido" unique_id=1140508505]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.839216, 0.458824, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 32
+text = "Localidad"
+
+[node name="CampoLocalidad" type="LineEdit" parent="PanelAvistamiento/Margen/Contenido" unique_id=1459151583]
+custom_minimum_size = Vector2(0, 104)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 34
+placeholder_text = "Ej: Hurlingham"
+clear_button_enabled = true
+
+[node name="Estado" type="Label" parent="PanelAvistamiento/Margen/Contenido" unique_id=1756159675]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.658824, 0.552941, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Acciones" type="HBoxContainer" parent="PanelAvistamiento/Margen/Contenido" unique_id=1917931669]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Confirmar" type="Button" parent="PanelAvistamiento/Margen/Contenido/Acciones" unique_id=89035423]
+custom_minimum_size = Vector2(0, 112)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 31
+text = "¡Contarlo!"
+
+[node name="Cancelar" type="Button" parent="PanelAvistamiento/Margen/Contenido/Acciones" unique_id=865170029]
+custom_minimum_size = Vector2(0, 112)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 31
+text = "Cancelar"
+
+[node name="ArcadeSecreto" type="PanelContainer" parent="." unique_id=833275323]
+visible = false
+z_index = 90
+layout_mode = 0
+offset_left = -513.0
+offset_top = -192.0
+offset_right = 547.0
+offset_bottom = 2188.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_arcade")
+
+[node name="Margen" type="MarginContainer" parent="ArcadeSecreto" unique_id=1551754675]
+layout_mode = 2
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_top = 54
+theme_override_constants/margin_right = 56
+theme_override_constants/margin_bottom = 54
+
+[node name="Contenido" type="VBoxContainer" parent="ArcadeSecreto/Margen" unique_id=449495919]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="Header" type="HBoxContainer" parent="ArcadeSecreto/Margen/Contenido" unique_id=1101416247]
+layout_mode = 2
+
+[node name="TituloArcade" type="Label" parent="ArcadeSecreto/Margen/Contenido/Header" unique_id=2105417798]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.831, 0.35, 1)
+theme_override_colors/font_outline_color = Color(0.18, 0.04, 0.32, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 58
+text = "Arcade salchicha"
+
+[node name="CerrarArcade" type="Button" parent="ArcadeSecreto/Margen/Contenido/Header" unique_id=1068480657]
+custom_minimum_size = Vector2(112, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 42
+text = "×"
+
+[node name="SubtituloArcade" type="Label" parent="ArcadeSecreto/Margen/Contenido" unique_id=480893663]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.62, 1, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 30
+text = "Encontraste el rincón secreto de las huellitas."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MenuArcade" type="VBoxContainer" parent="ArcadeSecreto/Margen/Contenido" unique_id=911361378]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 34
+
+[node name="Descripcion" type="Label" parent="ArcadeSecreto/Margen/Contenido/MenuArcade" unique_id=1540258447]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.92)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 38
+text = "Dos juegos pequeños para descansar entre avistamientos. ¿Cuál jugamos?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BotonAtrapa" type="Button" parent="ArcadeSecreto/Margen/Contenido/MenuArcade" unique_id=390261149]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35, 0.72, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.04, 0.12, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 48
+text = "ATRAPA AL SALCHICHA
+Reflejos · 20 segundos"
+
+[node name="BotonMemoria" type="Button" parent="ArcadeSecreto/Margen/Contenido/MenuArcade" unique_id=644063441]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.46, 1, 1)
+theme_override_colors/font_outline_color = Color(0.08, 0.02, 0.15, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 48
+text = "MEMORIA DE RAREZAS
+Recordá la secuencia"
+
+[node name="Pista" type="Label" parent="ArcadeSecreto/Margen/Contenido/MenuArcade" unique_id=396656337]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0.831, 0.35, 0.76)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 29
+text = "El arcade seguirá escondido. Para volver tendrás que encontrar otra vez las cinco huellitas."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="JuegoAtrapa" type="VBoxContainer" parent="ArcadeSecreto/Margen/Contenido" unique_id=1795517866]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 18
+
+[node name="HUD" type="HBoxContainer" parent="ArcadeSecreto/Margen/Contenido/JuegoAtrapa" unique_id=1776363233]
+layout_mode = 2
+
+[node name="Tiempo" type="Label" parent="ArcadeSecreto/Margen/Contenido/JuegoAtrapa/HUD" unique_id=619009673]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.35, 0.72, 1, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 42
+text = "Tiempo: 20"
+
+[node name="Puntaje" type="Label" parent="ArcadeSecreto/Margen/Contenido/JuegoAtrapa/HUD" unique_id=204868954]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.831, 0.35, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 42
+text = "Atrapados: 0"
+horizontal_alignment = 2
+
+[node name="AreaAtrapa" type="PanelContainer" parent="ArcadeSecreto/Margen/Contenido/JuegoAtrapa" unique_id=156681138]
+custom_minimum_size = Vector2(0, 1480)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_area_arcade")
+
+[node name="Campo" type="Control" parent="ArcadeSecreto/Margen/Contenido/JuegoAtrapa/AreaAtrapa" unique_id=337574154]
+layout_mode = 2
+
+[node name="Objetivo" type="Button" parent="ArcadeSecreto/Margen/Contenido/JuegoAtrapa/AreaAtrapa/Campo" unique_id=2049376017]
+custom_minimum_size = Vector2(230, 180)
+layout_mode = 0
+offset_left = 310.0
+offset_top = 540.0
+offset_right = 540.0
+offset_bottom = 720.0
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 24
+text = "¡Tocame!"
+
+[node name="Resultado" type="Label" parent="ArcadeSecreto/Margen/Contenido/JuegoAtrapa" unique_id=1513434168]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.831, 0.35, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Volver" type="Button" parent="ArcadeSecreto/Margen/Contenido/JuegoAtrapa" unique_id=126860764]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 34
+text = "Volver al arcade"
+
+[node name="JuegoMemoria" type="VBoxContainer" parent="ArcadeSecreto/Margen/Contenido" unique_id=1813706856]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="Nivel" type="Label" parent="ArcadeSecreto/Margen/Contenido/JuegoMemoria" unique_id=680470069]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.831, 0.35, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 46
+text = "Nivel 1"
+horizontal_alignment = 1
+
+[node name="Instruccion" type="Label" parent="ArcadeSecreto/Margen/Contenido/JuegoMemoria" unique_id=187737410]
+custom_minimum_size = Vector2(0, 110)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.75, 1, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 32
+text = "Mirá la secuencia..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Grilla" type="GridContainer" parent="ArcadeSecreto/Margen/Contenido/JuegoMemoria" unique_id=364134967]
+custom_minimum_size = Vector2(0, 1180)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 24
+columns = 2
+
+[node name="Comun" type="Button" parent="ArcadeSecreto/Margen/Contenido/JuegoMemoria/Grilla" unique_id=1058855974]
+custom_minimum_size = Vector2(0, 560)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 40
+text = "COMÚN"
+
+[node name="Raro" type="Button" parent="ArcadeSecreto/Margen/Contenido/JuegoMemoria/Grilla" unique_id=1106036663]
+custom_minimum_size = Vector2(0, 560)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 40
+text = "RARO"
+
+[node name="Epico" type="Button" parent="ArcadeSecreto/Margen/Contenido/JuegoMemoria/Grilla" unique_id=1289997743]
+custom_minimum_size = Vector2(0, 560)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 40
+text = "ÉPICO"
+
+[node name="Legendario" type="Button" parent="ArcadeSecreto/Margen/Contenido/JuegoMemoria/Grilla" unique_id=1023200801]
+custom_minimum_size = Vector2(0, 560)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 36
+text = "LEGENDARIO"
+
+[node name="Resultado" type="Label" parent="ArcadeSecreto/Margen/Contenido/JuegoMemoria" unique_id=161934430]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.831, 0.35, 1)
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 33
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Acciones" type="HBoxContainer" parent="ArcadeSecreto/Margen/Contenido/JuegoMemoria" unique_id=2129025913]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Reiniciar" type="Button" parent="ArcadeSecreto/Margen/Contenido/JuegoMemoria/Acciones" unique_id=869627117]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 31
+text = "Jugar otra vez"
+
+[node name="Volver" type="Button" parent="ArcadeSecreto/Margen/Contenido/JuegoMemoria/Acciones" unique_id=797602380]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 31
+text = "Volver al arcade"
+
+[node name="PanelAdmin" type="VBoxContainer" parent="." unique_id=1383696347]
+visible = false
+z_index = 50
+custom_minimum_size = Vector2(300, 560)
+layout_mode = 0
+offset_left = -407.0
+offset_top = 1620.0
+offset_right = 506.0
+offset_bottom = 2250.0
+theme_override_constants/separation = 12
+
+[node name="CajaTitulo" type="LineEdit" parent="PanelAdmin" unique_id=1840441926]
+custom_minimum_size = Vector2(0, 110)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 38
+text = "Mensaje salchicha"
+placeholder_text = "Título de la notificación"
+
+[node name="CajaMensaje" type="LineEdit" parent="PanelAdmin" unique_id=706918982]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 38
+placeholder_text = "Escribe el mensaje para Cami ❤️"
+
+[node name="BotonEnviar" type="Button" parent="PanelAdmin" unique_id=1749058728]
+custom_minimum_size = Vector2(100, 150.515)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 38
+text = "Enviar Notificacion!!!"
+
+[node name="EstadoEnvio" type="Label" parent="PanelAdmin" unique_id=1026291444]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5_2etjx")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HTTPNotificacion" type="HTTPRequest" parent="." unique_id=1466983478]
+
+[node name="HTTPHito" type="HTTPRequest" parent="." unique_id=67105786]
+
+[node name="HTTPAvistamiento" type="HTTPRequest" parent="." unique_id=639310947]
+
+[connection signal="gui_input" from="Label" to="." method="_on_label_gui_input"]
+[connection signal="pressed" from="PanelAdmin/BotonEnviar" to="." method="_on_boton_enviar_pressed"]
